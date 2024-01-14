@@ -7,12 +7,10 @@
   background-color: rgba(255, 144, 14, 0.1);
   padding: 50px 240px;
 }
-.nav-bar {
+.nav-bar, .image-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 1500px;
-  /* padding:0px auto; */
 }
 .nav-title {
   color: #131313;
@@ -20,38 +18,115 @@
   font-size: 45px;
   font-weight: 700;
 }
-.nav-tool{
-    display: flex;
-    font-weight: 500;
-    font-size: 20px;
+.nav-tool {
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
 }
-.nav-tool > li{
-    list-style: none;
-    margin-left: 30px;
+.nav-tool > li {
+  list-style: none;
+  margin-left: 30px;
 }
-.nav-tool > li > a{
-    text-decoration: none;
-    color:#424242;
-}   
+.nav-tool > li > a {
+  text-decoration: none;
+  color: #424242;
+}
 
-.banner-content{
-    width: 800px;
-    text-align: center;
-    margin:0 auto;
+.banner-content {
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
 }
-.banner-title{
-    font-size: 65px;
-    font-weight: 700;
-    color:#131313;
+.banner-title {
+  font-size: 65px;
+  font-weight: 700;
+  color: #131313;
 }
-.header-btn{
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: orange;
-    color:white;
-    border:none;
-    margin-bottom: 70px;
-    margin-top: 50px;
+.btn-primary{
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: orange;
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 20px 25px;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+/* end header styles  */
+
+/* start main styles */
+.image-container{
+  margin: 30px 250px;
+  align-items: center;
+}
+.image-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:20px;
+}
+.image-container > img {
+  border-radius: 5px;
+}
+.features-content{
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.ql{
+  font-weight: 700;
+  font-size: 42px;
+  color:#464545;
+}
+.of-our{
+  color:rgb(24, 35, 185);
+  font-weight: 700;
+  font-size: 42px;
+}
+.text-features{
+  color:red;
+  font-weight: 700;
+  font-size: 42px;
+}
+.features-description{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+
+}
+
+
+/*  start media queary. */
+/* header responsive  */
+@media screen and (max-width: 780px) {
+  .nav-bar {
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .banner-content {
+    width: 90%;
+  }
+  .header {
+    padding: 0;
+  }
+  .banner > img {
+    width: 100%;
+  }
+}
+
+/* main responsive */
+@media screen and (max-width:780px) {
+   .image-container{
+    flex-direction: column-reverse;
+    width: 100%;
+    margin:5px 5px ;
+   }
+
+   .image-content{
+    grid-template-columns: 1fr;
+   }
+   .features-content{
+    padding:5% 5%;
+   }
 }
